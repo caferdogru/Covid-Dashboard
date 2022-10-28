@@ -1,0 +1,27 @@
+
+
+.dashboard {
+    height: 100%;
+    display:flex
+}
+
+.form-div {
+    width: 300px;
+    height: inherit;
+    background-color: grey;
+    display: flex;
+    justify-content: space-end;
+}
+
+.country, .type, .btn-submit {
+    width: 90%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.chart-area {
+    width:calc(100%-300px);
+    height:100%;
+    margin-left: 50px;
+}

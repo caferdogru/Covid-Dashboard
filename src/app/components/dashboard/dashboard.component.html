@@ -1,0 +1,20 @@
+
+<div class="dashboard">
+    <div class="form-div">
+        <form class="input-form">
+            <select name="country" class="country" [(ngModel)]="selectedCountry" >
+                <option *ngFor="let country of this.countryService.countryList" [ngValue]="country">{{country.Country}}</option>
+            </select>
+            <select name="status" class="type" [(ngModel)]="selectedStatus">
+                <option *ngFor="let type of statusTypes"> {{type}}</option>
+            </select>
+            <select name="chartType" class="type" [(ngModel)]="selectedChartType">
+                <option *ngFor="let type of chartTypes"> {{type}}</option>
+            </select>
+            <button type="submit" class="btn-submit" (click)="getData()">Filter</button>
+        </form>
+    </div>
+    <div *ngIf="chartData" class="chart-area">
+        <plotly-plot #chart [data]="chartData.data" [layout]="chartData.layout"></plotly-plot>
+    </div> 
+</div>
