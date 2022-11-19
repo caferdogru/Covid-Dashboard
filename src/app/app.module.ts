@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import * as PlotlyJS from 'plotly.js-dist-min';
 import { PlotlyModule } from 'angular-plotly.js';
 import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 PlotlyModule.plotlyjs = PlotlyJS;
@@ -23,6 +24,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     HttpClientModule,
     FormsModule,
     PlotlyModule,
+    BrowserAnimationsModule,
     MatSelectModule,
   ],
   providers: [

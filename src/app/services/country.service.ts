@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Confirmed } from '../models/confirmed';
 import { Country } from '../models/country';
 
 @Injectable({
@@ -13,7 +12,6 @@ export class CountryService {
 
   baseUrl = "https://api.covid19api.com/";
   countryList: Country[] = [];
-  data:Confirmed[] = [];
 
   getCountryInfo() {
     this.httpClient.get<Country[]>(this.baseUrl + "countries").subscribe(res => {
